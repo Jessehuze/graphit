@@ -22,4 +22,4 @@ class SmartFile:
 
     def print_raw(self):
         for line in self.line_list:
-            print(line.get_raw())
+            print(str(line.num_indents) + ": " + line.get_raw())
