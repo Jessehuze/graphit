@@ -33,6 +33,7 @@ class AugTokGen:
             token_list = [next(self.tokgen)]
         except StopIteration:
             raise StopIteration
+
         while not self.is_newline(token_list[-1]):
             token_list.append(next(self.tokgen))
         return token_list

@@ -1,4 +1,5 @@
 from objectiPhyed.smartFile import SmartFile
+from objectiPhyed.lineType import LineType
 
 
 def main():
@@ -7,6 +8,8 @@ def main():
     smartfile.load_file()
 
     smartfile.print_raw()
+
+    print(LineType.CLASS._value_)
 
 if __name__ == '__main__':
     main()

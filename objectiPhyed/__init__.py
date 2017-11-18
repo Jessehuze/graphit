@@ -1,1 +1,1 @@
-__all__ = ['smartFile']
+__all__ = ['smartFile', 'smartLine']
