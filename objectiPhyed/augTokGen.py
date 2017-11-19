@@ -2,7 +2,7 @@ import tokenize
 
 
 class AugTokGen:
-    def __init__(self, file=None):
+    def __init__(self, file: str = None):
         if file is None:
             self.tokgen = None
         else:

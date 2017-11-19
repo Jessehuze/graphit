@@ -7,9 +7,7 @@ def main():
 
     smartfile.load_file()
 
-    smartfile.print_raw()
-
-    print(LineType.CLASS._value_)
+    smartfile.print_lines()
 
 if __name__ == '__main__':
     main()

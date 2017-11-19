@@ -16,13 +16,13 @@ class LineType(Enum):
     EXCEPT = "except"
     # These types aren't suitable as comparators
     OPERATIONAL = "__operational__"
-    EMPTY = "__empty__"
+    BLANK = "__blank__"
     DECORATOR = "__decorator__"
 
     @staticmethod
     def get_value(word):
         if word is None or word.isspace() or word == '':
-            return LineType.EMPTY
+            return LineType.BLANK
         try:
             word = word.strip(':')
             return LineType(word)

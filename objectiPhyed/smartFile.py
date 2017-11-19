@@ -1,11 +1,14 @@
+from typing import List
+
 from .augTokGen import AugTokGen
 from .smartLine import SmartLine
 
 
 class SmartFile:
+    line_list: List[SmartLine] = []
+
     def __init__(self, file):
-        self.file = file
-        self.line_list = []
+        self.file: str = file
 
     def load_file(self):
         tokgen = AugTokGen(self.file)
@@ -19,7 +22,3 @@ class SmartFile:
     def print_lines(self):
         for line in self.line_list:
             print(line)
-
-    def print_raw(self):
-        for line in self.line_list:
-            print(str(line.num_indents) + ": " + line.get_raw())

@@ -1,16 +1,18 @@
 from objectiPhyed.lineType import LineType
+from .augTokGen import AugTokGen
+from typing import List
 
-
+# TODO: Need to check for '\' at end of line...?
 class SmartLine:
-    def __init__(self, token_list, parent=None):
+    def __init__(self, token_list: List[AugTokGen], parent=None):
         self.token_list = token_list
         self.parent = parent
-        self.num_indents = 0
-        self.line_type = None
-        self.raw_text = None
+        self.num_indents: int = 0
+        self.line_type: LineType = None
+        self.raw_text: str = None
         # text is stripped of newlines
-        self.text = None
-        self.tab_char = None
+        self.text: str = None
+        self.tab_char: str = None
 
         # Set Raw Text and text with NL removed for printing
         if len(self.token_list):
@@ -54,10 +56,9 @@ class SmartLine:
         return self.__unicode__()
 
     def __unicode__(self):
-        return self.text
-
-    def set_parent(self, parent):
-        self.parent = parent
+        return "<Type:\"" + str(self.line_type.name) + \
+                "\"\tNumIndents:" + str(self.num_indents) + \
+                "\tText:\"" + str(self.text.lstrip()) + "\">"
 
     def get_raw(self):
         return str(self.token_list)

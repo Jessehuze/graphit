@@ -1,0 +1,2 @@
+class GraphBreakingError(Exception):
+    pass
