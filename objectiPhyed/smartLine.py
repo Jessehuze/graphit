@@ -2,6 +2,7 @@ from objectiPhyed.lineType import LineType
 from .augTokGen import AugTokGen
 from typing import List
 
+
 # TODO: Need to check for '\' at end of line...?
 class SmartLine:
     def __init__(self, token_list: List[AugTokGen], parent=None):
