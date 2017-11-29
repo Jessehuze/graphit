@@ -5,10 +5,9 @@ from .smartLine import SmartLine
 
 
 class SmartFile:
-    line_list: List[SmartLine] = []
-
     def __init__(self, file):
         self.file: str = file
+        self.line_list: List[SmartLine] = []
 
     def load_file(self):
         tokgen = AugTokGen(self.file)

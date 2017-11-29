@@ -11,7 +11,7 @@ class SmartLine:
         self.num_indents: int = 0
         self.line_type: LineType = None
         self.raw_text: str = None
-        # text is stripped of newlines
+        # self.text is stripped of newlines
         self.text: str = None
         self.tab_char: str = None
 
